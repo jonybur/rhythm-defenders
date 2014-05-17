@@ -1,0 +1,27 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/PlanetControllerScript.cs">
+    <Files>
+      <File FileName="Assets/scripts/GetSpectrumScript.cs" Line="22" Column="3" />
+      <File FileName="Assets/scripts/PlanetaScript.cs" Line="16" Column="57" />
+      <File FileName="Assets/scripts/ParticleScript.cs" Line="6" Column="15" />
+      <File FileName="Assets/scripts/PlayerScript.cs" Line="8" Column="2" />
+      <File FileName="Assets/scripts/PlanetControllerScript.cs" Line="21" Column="30" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="scripts" expanded="True">
+              <Node name="PlanetControllerScript.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
