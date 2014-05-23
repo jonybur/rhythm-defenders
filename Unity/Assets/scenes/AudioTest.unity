@@ -640,7 +640,7 @@ AudioSource:
   m_GameObject: {fileID: 1138713554}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: be44bddea3e9e4aa8b7fcdc1a2b40d39, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2385cb98610a94f4086ba2de257a7bf7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3209,6 +3209,46 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 456220729}
+--- !u!1 &1995974898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1995974900}
+  - 114: {fileID: 1995974899}
+  m_Layer: 0
+  m_Name: alien_controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1995974899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995974898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e6705eabb814536a33cae8c27f216c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aliens:
+  - {fileID: 100000, guid: 8636731d0ac104e9f8d6551f41b43338, type: 2}
+--- !u!4 &1995974900
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995974898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &2103380668
 GameObject:
   m_ObjectHideFlags: 0
