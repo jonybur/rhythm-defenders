@@ -3238,6 +3238,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aliens:
   - {fileID: 100000, guid: 8636731d0ac104e9f8d6551f41b43338, type: 2}
+  - {fileID: 100000, guid: b54ecd65d7768433a800c5defe9ed91a, type: 2}
+  - {fileID: 100000, guid: 6837b88bdbdcd45e6b472dc0ebea1192, type: 2}
 --- !u!4 &1995974900
 Transform:
   m_ObjectHideFlags: 0
