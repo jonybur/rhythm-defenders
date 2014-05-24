@@ -11,7 +11,7 @@ public class BotonDisparoScript : MonoBehaviour {
 	void Awake()
 	{
 		index = 0f;
-		rate = 0.1f;
+		rate = 0.3f;
 	}
 
 	void Update () {
