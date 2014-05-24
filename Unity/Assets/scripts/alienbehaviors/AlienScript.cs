@@ -10,5 +10,8 @@ public class AlienScript : MonoBehaviour {
 		{
 			Destroy (this.gameObject);
 		}
+
+		BoxCollider2D coll = this.collider2D as BoxCollider2D;
+		coll.size = this.renderer.bounds.size;
 	}
 }

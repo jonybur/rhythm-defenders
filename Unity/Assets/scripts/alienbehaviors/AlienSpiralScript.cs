@@ -32,9 +32,7 @@ public class AlienSpiralScript : AlienScript {
 		movSin =  amplitude * Mathf.Sin(index * Mathf.PI);
 		
 		this.transform.position = new Vector3(movCos, -index + primerTamY + Camera.main.orthographicSize + movSin, 0);
-		
-		
-		
+
 		if (this.transform.position.x > 0)
 		{
 			this.transform.eulerAngles = new Vector3(0,0,Mathf.Rad2Deg * Mathf.Atan(movSin/movCos));

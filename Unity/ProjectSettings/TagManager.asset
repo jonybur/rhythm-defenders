@@ -3,6 +3,7 @@
 --- !u!78 &1
 TagManager:
   tags:
+  - alien
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -64,4 +65,8 @@ TagManager:
   - name: characters
     userID: 3
     uniqueID: 609730805
+    locked: 0
+  - name: hud
+    userID: 7
+    uniqueID: 4194546067
     locked: 0

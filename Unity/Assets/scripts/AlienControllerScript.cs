@@ -92,7 +92,7 @@ public class AlienControllerScript : MonoBehaviour {
 			
 		case "alien3":
 			cantidadALanzar = 50;
-			periodo = .3f;
+			periodo = .2f;
 			break;
 		}
 		
