@@ -8,8 +8,10 @@ public class AlienOscScript : AlienScript {
 	float index;
 	float oscilacion;
 		
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
+
 		amplitude = 8f;
 		omega = 5f;
 		index = 0;
@@ -24,6 +26,5 @@ public class AlienOscScript : AlienScript {
 		transform.Translate (oscilacion, -2*Time.deltaTime,0, Space.World);
 
 		this.transform.Rotate(new Vector3(0,0,oscilacion* -60));
-
 	}
 }

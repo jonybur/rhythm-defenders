@@ -11,8 +11,9 @@ public class AlienCircleScript : AlienScript {
 	float movSin;
 	float primerTamY;
 
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		primerTamY = this.renderer.bounds.size.y;
 		index = 1f;
 		variacion = .3f;
