@@ -220,7 +220,7 @@ Transform:
 --- !u!1 &153745778
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 100000, guid: 923bfc0dff785445a9fd57d0a831ac8e, type: 2}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
@@ -237,7 +237,8 @@ GameObject:
 --- !u!114 &153745779
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 11400000, guid: 923bfc0dff785445a9fd57d0a831ac8e,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153745778}
   m_Enabled: 1
@@ -249,7 +250,8 @@ MonoBehaviour:
 --- !u!212 &153745780
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 21200000, guid: 923bfc0dff785445a9fd57d0a831ac8e,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153745778}
   m_Enabled: 1
@@ -272,7 +274,7 @@ SpriteRenderer:
 --- !u!4 &153745781
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 400000, guid: 923bfc0dff785445a9fd57d0a831ac8e, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153745778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -345,7 +347,7 @@ MonoBehaviour:
 --- !u!1 &241395819
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 100002, guid: 923bfc0dff785445a9fd57d0a831ac8e, type: 2}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
@@ -361,7 +363,8 @@ GameObject:
 --- !u!212 &241395820
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 21200002, guid: 923bfc0dff785445a9fd57d0a831ac8e,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 241395819}
   m_Enabled: 1
@@ -384,7 +387,7 @@ SpriteRenderer:
 --- !u!4 &241395821
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 400002, guid: 923bfc0dff785445a9fd57d0a831ac8e, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 241395819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}

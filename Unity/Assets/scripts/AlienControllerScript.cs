@@ -77,7 +77,9 @@ public class AlienControllerScript : MonoBehaviour {
 	{
 		// elige que batch manda, y setea las variables para que eso ocurra
 		alien = aliens[Random.Range(0,aliens.Length)];
-		
+
+
+		// TODO: ver como arreglar esto
 		switch (alien.name)
 		{
 		case "alien1":
@@ -104,8 +106,11 @@ public class AlienControllerScript : MonoBehaviour {
 		// depende el alien, depende el timer
 		// tambien se debe poner un tope de cantidad de aliens a spawnear
 
-
 		GameObject p = (GameObject)Instantiate(alien);
+		AlienKamikazeScript kamikaze = p.GetComponent("AlienKamikazeScript") as AlienKamikazeScript;
+		kamikaze.posicionPlayer = GameObject.Find("player").transform as Transform;
+
+
 		float altoPantalla = Camera.main.orthographicSize;
 
 		p.transform.position = new Vector3(0,
