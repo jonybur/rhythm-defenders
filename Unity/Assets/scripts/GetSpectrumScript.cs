@@ -10,6 +10,8 @@ public class GetSpectrumScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Awake () {
+		DontDestroyOnLoad(this.transform.parent.gameObject);
+		DontDestroyOnLoad(this.transform.gameObject);
 		Application.targetFrameRate = 60;
 	}
 	
