@@ -295,6 +295,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nave: {fileID: 241395819}
   bala: {fileID: 100000, guid: c70994831fd5d4801855d860e33e52da, type: 2}
+  botones:
+  - {fileID: 21300000, guid: c997689d7544245dd9203c3f95168155, type: 3}
+  - {fileID: 21300000, guid: b9b4af19f8fd749d7aa2c2901ce6795d, type: 3}
 --- !u!1 &210356953
 GameObject:
   m_ObjectHideFlags: 0
@@ -4367,7 +4370,7 @@ SpriteRenderer:
   m_SortingLayer: 7
   m_SortingOrder: 0
   m_SortingLayerID: 4194546067
-  m_Sprite: {fileID: 21300000, guid: dcdb130017e064e109dbe8c85d2a5db9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c997689d7544245dd9203c3f95168155, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1704332855
 Transform:
@@ -4390,8 +4393,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.79999995, y: 1.29999995, z: .00999999978}
-  m_Center: {x: .100000001, y: -.0199999996, z: 0}
+  m_Size: {x: 2, y: 1.29999995, z: .00999999978}
+  m_Center: {x: 0, y: -.0199999996, z: 0}
 --- !u!1 &1943691286
 GameObject:
   m_ObjectHideFlags: 0
