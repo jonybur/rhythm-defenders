@@ -65,11 +65,11 @@ public class PlayButtonScript : MonoBehaviour {
 			menuRenderer.sprite = menus[3];
 			break;
 		case "play_button":
-			audioSource.Play();
-			Application.LoadLevel("AudioTest");
-			break;
-		default:
-			menuRenderer.sprite = menus[4];
+			if (audioSource.clip != null)
+			{
+				audioSource.Play();
+				Application.LoadLevel("AudioTest");
+			}
 			break;
 		}
 	}
