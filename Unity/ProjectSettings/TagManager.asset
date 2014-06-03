@@ -4,6 +4,9 @@
 TagManager:
   tags:
   - alien
+  - kamikaze
+  - asesino
+  - bala
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -65,6 +68,10 @@ TagManager:
   - name: characters
     userID: 3
     uniqueID: 609730805
+    locked: 0
+  - name: kamikaze
+    userID: 8
+    uniqueID: 2945403689
     locked: 0
   - name: hud
     userID: 7

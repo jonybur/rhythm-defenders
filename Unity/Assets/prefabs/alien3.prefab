@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posicionPlayer: {fileID: 0}
+  sprite: {fileID: 21300000, guid: c87d167a48ffd467499be3274c6f957c, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
