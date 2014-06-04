@@ -17,7 +17,7 @@ public class GameOverScript : MonoBehaviour {
 	void OnGUI () {
 		// pixeles de iphone
 		
-		GUI.Label(new Rect(0, 500, 610, 50), "SCORE " + player.puntaje, estilo);
+		GUI.Label(new Rect(0, 520, 640, 50), player.puntaje.ToString(), estilo);
 		
 	}
 }

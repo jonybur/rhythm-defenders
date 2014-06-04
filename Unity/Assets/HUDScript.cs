@@ -14,7 +14,8 @@ public class HUDScript : MonoBehaviour {
 	void OnGUI () {
 		// pixeles de iphone
 
-		GUI.Label(new Rect(0, 10, 610, 100), "SCORE: " + player.puntaje.ToString(), estilo);
+		GUI.Label(new Rect(0, 60, 610, 100), "SCORE: " + player.puntaje.ToString(), estilo);
+		GUI.Label(new Rect(0, 10, 610, 100), "LIVES: " + player.vidas.ToString(), estilo);
 
 	}
 }
