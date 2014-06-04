@@ -16,6 +16,7 @@ public class PlayButtonScript : MonoBehaviour {
 	
 
 	void Update () {
+		Time.timeScale = 1;
 		if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor)
 		{
 			/* TODO: BORRAR LA PARTE DE DEBUG EN PC */

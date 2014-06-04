@@ -21,7 +21,7 @@ public class AlienScript : MonoBehaviour {
 		coll.size = this.renderer.bounds.size;
 
 		// hay 1 en 40 de probabilidad que este alien se convierta en un kamikaze
-		if (Random.Range(1,2) == 1 && GameObject.Find("player") != null)
+		if (Random.Range(1,30) == 1 && GameObject.Find("player") != null)
 		{
 			gameObject.tag = "kamikaze";
 		}

@@ -87,17 +87,17 @@ public class AlienControllerScript : MonoBehaviour {
 		switch (alien.name)
 		{
 			case "alien1":
-				cantidadALanzar = 25;
-				tiempoEntreAliens = .2f;
+				cantidadALanzar = 60;
+				tiempoEntreAliens = .1f;
 				break;
 				
 			case "alien2":
-				cantidadALanzar = 25;
+				cantidadALanzar = 40;
 				tiempoEntreAliens = .2f;
 				break;
 				
 			case "alien3":
-				cantidadALanzar = 25;
+				cantidadALanzar = 40;
 				tiempoEntreAliens = .2f;
 				break;
 		}

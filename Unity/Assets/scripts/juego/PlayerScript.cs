@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 		
-	int vidas;
+	public int vidas;
 	public bool parpadeo;
 	float timerParpadeo;
 	float tiempoAParpadear;
@@ -106,7 +106,7 @@ public class PlayerScript : MonoBehaviour {
 			{			
 				parpadeo = true;
 			}else{
-				/* TODO: GameOver */
+				/* TODO: GameOver (pasarlo del controladortouch a acá) */
 			}
 			
 			Instantiate(Resources.Load("explosion_player", typeof(GameObject)), this.transform.position, Quaternion.identity);
