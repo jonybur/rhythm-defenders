@@ -10,6 +10,7 @@ public class AlienKamikazeScript : AlienScript {
 	void Start()
 	{
 		// este mismo script desactiva cualquier otro script de movimiento que haya activo
+		posicionPlayer = GameObject.Find("player").transform;
 
 		switch (this.name)
 		{

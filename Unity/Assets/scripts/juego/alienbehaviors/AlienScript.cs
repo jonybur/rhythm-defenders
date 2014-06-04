@@ -7,16 +7,21 @@ public class AlienScript : MonoBehaviour {
 	bool chequeado;
 	GameObject explosion;
 	bool explota;
+	PlayerScript player;
+
+	public int puntaje;
 
 	public virtual void Awake()
 	{
+		puntaje = 10;
 		explota = false;
+		player = GameObject.Find("player").gameObject.GetComponent("PlayerScript") as PlayerScript;
 		
 		BoxCollider2D coll = this.collider2D as BoxCollider2D;
 		coll.size = this.renderer.bounds.size;
 
 		// hay 1 en 40 de probabilidad que este alien se convierta en un kamikaze
-		if (Random.Range(1,40) == 1 && GameObject.Find("player") != null)
+		if (Random.Range(1,2) == 1 && GameObject.Find("player") != null)
 		{
 			gameObject.tag = "kamikaze";
 		}
@@ -36,7 +41,7 @@ public class AlienScript : MonoBehaviour {
 		    this.gameObject.tag == "kamikaze")
 		{	
 			AlienKamikazeScript kamikaze = this.GetComponent("AlienKamikazeScript") as AlienKamikazeScript;
-
+			kamikaze.enabled = true;
 		}
 
 		if (this.transform.position.y + this.renderer.bounds.size.y < -Camera.main.orthographicSize)
@@ -48,16 +53,15 @@ public class AlienScript : MonoBehaviour {
 
 	public virtual void OnTriggerEnter2D(Collider2D other)
 	{
-		explota = true;		
-		PlayerScript p = other.gameObject.GetComponent("PlayerScript") as PlayerScript;
 
 		if (other.gameObject.tag == "bala")
-		{
-			Destroy(other.gameObject);
+		{	
+			explota = true;
+			player.Mata(puntaje, this.transform.position);
 			Destroy(this.gameObject);
 		}
 
-		if (other.gameObject.name == "player" && !p.parpadeo)
+		if (other.gameObject.name == "player" && !player.parpadeo)
 		{
 			this.gameObject.tag = "asesino";
 
@@ -68,8 +72,8 @@ public class AlienScript : MonoBehaviour {
 			{
 				Destroy (g.gameObject);
 			}
-			p.Destruir();
-
+			
+			player.Destruir();		
 			Destroy(this.gameObject);
 		}
 	}

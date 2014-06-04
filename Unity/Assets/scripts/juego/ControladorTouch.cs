@@ -30,6 +30,18 @@ public class ControladorTouch : MonoBehaviour {
 		if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor)
 		{
 			/* TODO: BORRAR LA PARTE DE DEBUG EN PC */
+
+			if (Input.GetKeyDown(KeyCode.Space))
+			{
+				butPres = true;
+				if (index > rate)
+				{
+					
+					GameObject b = (GameObject)Instantiate(bala);
+					b.transform.position = nave.transform.position + new Vector3(0,nave.renderer.bounds.size.y/2,0);
+					index = 0; 
+				}
+			}
 		}
 		else if (Application.platform == RuntimePlatform.IPhonePlayer)
 		{

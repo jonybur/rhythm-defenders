@@ -33,6 +33,8 @@ public class PlanetControllerScript : MonoBehaviour {
 		SpriteRenderer sRenderer = p.GetComponent("SpriteRenderer") as SpriteRenderer;
 		sRenderer.sprite = sprite;
 
+		p.renderer.sortingLayerName = "planetas";
+
 		p.transform.position = new Vector3(Random.Range (-anchoPantalla, anchoPantalla),
 		                                   altoPantalla + p.renderer.bounds.size.y / 2,
 		                                   0);

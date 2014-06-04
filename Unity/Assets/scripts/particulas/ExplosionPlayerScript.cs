@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ExplosionScript : MonoBehaviour {
-
+public class ExplosionPlayerScript : MonoBehaviour {
+	
 	void Awake()
 	{
-		this.particleSystem.renderer.sortingLayerName = "explosiones";
+		particleSystem.renderer.sortingLayerName = "explosiones2";
 	}
-
+	
 	void LateUpdate () {
 		if (!particleSystem.IsAlive())
 		{
