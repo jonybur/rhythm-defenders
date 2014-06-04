@@ -58,6 +58,7 @@ public class AlienScript : MonoBehaviour {
 		{	
 			explota = true;
 			player.Mata(puntaje, this.transform.position);
+			Destroy (other.gameObject);
 			Destroy(this.gameObject);
 		}
 

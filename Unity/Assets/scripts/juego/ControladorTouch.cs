@@ -31,7 +31,7 @@ public class ControladorTouch : MonoBehaviour {
 
 		rendererBoton = (SpriteRenderer)GameObject.Find("boton_disparo").GetComponent("SpriteRenderer");
 		index = 0f;
-		rate = 0.6f;
+		rate = 0.3f;
 		butPres = false;
 
 		
