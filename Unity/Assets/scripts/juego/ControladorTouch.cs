@@ -75,7 +75,7 @@ public class ControladorTouch : MonoBehaviour {
 				RaycastHit hit = new RaycastHit();
 				if (Physics.Raycast(ray, out hit))
 				{
-					Acciones (hit, new Vector3(1,1,1));
+					Acciones (hit, Camera.main.ScreenToWorldPoint(Input.mousePosition));
 				}
 			}
 			
