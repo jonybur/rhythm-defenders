@@ -552,6 +552,7 @@ MonoBehaviour:
   puntaje: 0
   combo: 0
   comboSignal: {fileID: 100000, guid: 4c081ca1a83f4495a92e53c91b96255b, type: 2}
+  touch_controller: {fileID: 665229433}
 --- !u!1 &259781962
 GameObject:
   m_ObjectHideFlags: 0

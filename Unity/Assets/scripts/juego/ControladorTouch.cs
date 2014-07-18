@@ -144,18 +144,21 @@ public class ControladorTouch : MonoBehaviour {
                                        0);
                 break;
 
-            // los tres menues mandan flag, porque la interaccion ocurre cuando se suelta el dedo
+			case "pause_button(Clone)":
+				// TODO: sacar strings de puntaje y botonera de FIRE
+				a.Pause();
+				botonPausa.SetActive(false);
+				menuPausa.SetActive(true);
+				Time.timeScale = 0;
+				break;
+
+            // los dos menues mandan flag, porque la interaccion ocurre cuando se suelta el dedo
             case "pause_menu(Clone)":
                 accion = 0;
                 break;
 
-            case "pause_button(Clone)":
-                // TODO: sacar el puntaje y la botonera también
-                accion = 1;
-                break;
-
             case "gameover_menu(Clone)":
-                accion = 2;
+                accion = 1;
                 break;
         }
 	}
@@ -172,19 +175,10 @@ public class ControladorTouch : MonoBehaviour {
                 Time.timeScale = 1;
                 break;
 
-            // pause_button(Clone)
-            case 1:
-                // TODO: sacar el puntaje y la botonera también
-                a.Pause();
-                botonPausa.SetActive(false);
-                menuPausa.SetActive(true);
-                Time.timeScale = 0;
-                break;
-
             // gameover_menu(Clone)
-            case 2:
-                menuGameOver.SetActive(false);
-                Application.LoadLevel("IntroScene");
+			case 1:
+				menuGameOver.SetActive(false);
+				Application.LoadLevel("IntroScene");
                 break;
         }
     }
