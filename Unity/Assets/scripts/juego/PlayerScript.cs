@@ -15,11 +15,14 @@ public class PlayerScript : MonoBehaviour {
 	float timerParaCombo;
 	float tiempoParaCombo;
 	SpriteRenderer s;
+    ControladorTouch c;
+    AudioSource a;
 
 	int comboAux;
 	public int combo;
 
 	public GameObject comboSignal;
+    public GameObject touch_controller;
 	
 	void Awake () {
 		tiempoAParpadear = .7f;
@@ -33,9 +36,19 @@ public class PlayerScript : MonoBehaviour {
 		combo = 0;
 
 		s = this.GetComponent("SpriteRenderer") as SpriteRenderer;
-		
+        c = touch_controller.GetComponent("ControladorTouch") as ControladorTouch;
+
 		BoxCollider2D coll = this.collider2D as BoxCollider2D;
 		coll.size = this.renderer.bounds.size;
+
+        try
+        {
+            a = (AudioSource)GameObject.Find("audio").GetComponent("AudioSource");
+        }
+        catch
+        {
+            a = (AudioSource)GameObject.Find("audio_debug").GetComponent("AudioSource");
+        }
 	}
 
 	public void Mata(int puntajeAlien, Vector3 posAlien)
@@ -106,7 +119,11 @@ public class PlayerScript : MonoBehaviour {
 			{			
 				parpadeo = true;
 			}else{
-				/* TODO: GameOver (pasarlo del controladortouch a acá) */
+                if (!a.isPlaying || (this.vidas < 0))
+                {
+                    a.Pause();
+                    c.menuGameOver.SetActive(true);
+                }
 			}
 			
 			Instantiate(Resources.Load("explosion_player", typeof(GameObject)), this.transform.position, Quaternion.identity);

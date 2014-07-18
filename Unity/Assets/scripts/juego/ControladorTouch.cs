@@ -33,7 +33,6 @@ public class ControladorTouch : MonoBehaviour {
 		index = 0f;
 		rate = 0.3f;
 		butPres = false;
-
 		
 		try
 		{
@@ -58,17 +57,10 @@ public class ControladorTouch : MonoBehaviour {
 
 		index += Time.deltaTime;
 		butPres = false;
-		
-		if (!a.isPlaying || (nave.GetComponent("PlayerScript") as PlayerScript).vidas < 0)
-		{
-			a.Pause();
-			menuGameOver.SetActive(true);
-		}
+
 
 		if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor)
 		{
-			/* TODO: BORRAR LA PARTE DE DEBUG EN PC */
-
 			if (Input.GetMouseButton(0))
 			{
 				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -107,8 +99,7 @@ public class ControladorTouch : MonoBehaviour {
 		if (butPres)
 		{
 			rendererBoton.sprite = botones[1];
-		}else{
-			
+		}else{			
 			rendererBoton.sprite = botones[0];
 		}
 			
@@ -116,51 +107,43 @@ public class ControladorTouch : MonoBehaviour {
 
 	void Acciones(RaycastHit hit, Vector3 posicion)
 	{
-		Debug.Log(hit.transform.gameObject.name);
-		if (hit.transform.gameObject.name == "boton_disparo")
-		{
-			butPres = true;
-			if (index > rate)
-			{
+        switch (hit.transform.gameObject.name)
+        {
+            case "boton_disparo":
+                butPres = true;
+			    if (index > rate)
+			    {
+				    GameObject b = (GameObject)Instantiate(bala);
+				    b.transform.position = nave.transform.position + new Vector3(0,nave.renderer.bounds.size.y/2,0);
+				    index = 0; 
+			    }
+                break;
 
-				GameObject b = (GameObject)Instantiate(bala);
-				b.transform.position = nave.transform.position + new Vector3(0,nave.renderer.bounds.size.y/2,0);
-				index = 0; 
-			}
-		}
+            case "control_nave":
+                nave.transform.position = new Vector3(posicion.x,
+                                       posicion.y + 2f,
+                                       0);
+                break;
 
-		else if (hit.transform.gameObject.name == "control_nave")
-		{
-			nave.transform.position = new Vector3 (posicion.x, 
-			                                       posicion.y + 2f,
-			                                       0);
-		}
+            case "pause_menu(Clone)":
+                botonPausa.SetActive(true);
+			    menuPausa.SetActive(false);			
+			    a.Play();
+			    Time.timeScale = 1;
+                break;
 
-		else if (hit.transform.gameObject.name == "pause_menu(Clone)")
-		{
-			botonPausa.SetActive(true);
-			menuPausa.SetActive(false);
-			
-			a.Play();          
+            case "pause_button(Clone)":
+                // TODO: sacar el puntaje y la botonera también
+                a.Pause();
+                botonPausa.SetActive(false);
+                menuPausa.SetActive(true);
+                Time.timeScale = 0;
+                break;
 
-			Time.timeScale = 1;
-		}
-
-		else if (hit.transform.gameObject.name == "pause_button(Clone)")
-		{		
-			// TODO: sacar el puntaje y la botonera también
-			
-			a.Pause();
-			botonPausa.SetActive(false);
-			menuPausa.SetActive(true);
-			Time.timeScale = 0;
-		}
-
-		else if (hit.transform.gameObject.name == "gameover_menu(Clone)")
-		{	
-			menuGameOver.SetActive(false);
-			Application.LoadLevel("IntroScene");
-		}
+            case "gameover_menu(Clone)":
+            	menuGameOver.SetActive(false);
+    			Application.LoadLevel("IntroScene");
+                break;
+        }
 	}
-
 }
