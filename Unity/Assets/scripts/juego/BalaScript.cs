@@ -8,9 +8,11 @@ public class BalaScript : MonoBehaviour {
 	
 	void Awake()
 	{
-
 		collider = this.collider2D as BoxCollider2D;
-		collider.size = (Vector2)this.renderer.bounds.size;
+
+        /* pequeño fix, en caso de que la imagen de la bala sea muy pequeña, se ajusta el collider para ser de un tamaño aceptable */
+	    collider.size = new Vector2(this.renderer.bounds.size.x > .04f ? this.renderer.bounds.size.x : .05f,
+                                    this.renderer.bounds.size.y > .04f ? this.renderer.bounds.size.y : .05f);
 	}
 	
 	void Update () {

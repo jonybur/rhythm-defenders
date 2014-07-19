@@ -152,6 +152,7 @@ public class ControladorTouch : MonoBehaviour {
 				Time.timeScale = 0;
 				break;
 
+            // el sistema via flag sirve para ejecutar la accion luego de soltar el dedo
             // los dos menues mandan flag, porque la interaccion ocurre cuando se suelta el dedo
             case "pause_menu(Clone)":
                 accion = 0;

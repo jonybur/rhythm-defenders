@@ -53,7 +53,6 @@ public class PlayerScript : MonoBehaviour {
 
 	public void Mata(int puntajeAlien, Vector3 posAlien)
 	{
-		Debug.Log (combo);
 		puntaje += puntajeAlien * (combo+1);
 
 		huboAsesinato = true;
