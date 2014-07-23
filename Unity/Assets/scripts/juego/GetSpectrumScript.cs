@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class GetSpectrumScript : MonoBehaviour {
 
 	private float[] samples = new float[512];
 	public float[] curValues = new float[8];
+
+    // promedio devuelve un promedio de los ultimos X (cantPromedio) de valores de curValues[0]
+    const int cantPromedio = 10;
+    private float[] ultimos = new float[cantPromedio];
+    private int numero = 0;
+    public float promedio;
 	
 	public Texture2D SampleImg;
 	
@@ -12,6 +19,8 @@ public class GetSpectrumScript : MonoBehaviour {
 	void Awake () {
 		DontDestroyOnLoad(this.transform.gameObject);
 		Application.targetFrameRate = 60;
+
+        Array.Clear(ultimos, 0, ultimos.Length);
 	}
 	
 	string ss = "";
@@ -44,20 +53,35 @@ public class GetSpectrumScript : MonoBehaviour {
 			curValues[i] = average * 10;
 			ss += curValues[i].ToString("0.000")+",";
 		}
+
+        if (numero < cantPromedio)
+        {
+            ultimos[numero] = curValues[0];
+            numero++;
+        }
+        else { numero = 0; }
+
+        for (int i = 0; i < cantPromedio; i++)
+        {
+            promedio += ultimos[i];
+        }
+        promedio /= cantPromedio;
+
+        Debug.Log(promedio);
 	}
 
 	void OnGUI()
 	{		
-		//GUI.Label(new Rect(0, 0, 600, 500), ss);
+		GUI.Label(new Rect(0, 0, 600, 500), ss);
 		
 		int ImageHeight = 20;
 		
-		/*for (int i = 0; i < 8; i++ )
+		for (int i = 0; i < 8; i++ )
 		{
 			float Height = ImageHeight * (1 - curValues[i]);
 			//GUI.DrawTexture(new Rect(15+ i * 35, 500 + Height, 30, ImageHeight - Height), SampleImg); 
-			//valorTest = curValues[0];
-		}*/
+		    //valorTest = curValues[0];
+		}
 		
 	}
 }

@@ -3044,6 +3044,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  promedio: 0
   SampleImg: {fileID: 2800000, guid: f6eac4e85a09042b3ba4acc5aefb642f, type: 3}
 --- !u!1 &1454511641
 GameObject:

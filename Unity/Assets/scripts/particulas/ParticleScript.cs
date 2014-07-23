@@ -23,9 +23,9 @@ public class ParticleScript : MonoBehaviour {
 
     void Update()
     {
-        this.particleSystem.playbackSpeed = playbackSpeed + a.curValues[0];
+        this.particleSystem.playbackSpeed = playbackSpeed + a.promedio;
 		// nota: el "/ 7" es a ojo, con el iphone de referencia
-        (this.particleSystem.renderer as ParticleSystemRenderer).velocityScale = velocityScale + a.curValues[0] / 7;
+        (this.particleSystem.renderer as ParticleSystemRenderer).velocityScale = velocityScale + a.promedio/7;
     }
 }
  
