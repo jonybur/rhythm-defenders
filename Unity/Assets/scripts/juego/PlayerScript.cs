@@ -68,6 +68,7 @@ public class PlayerScript : MonoBehaviour {
 		timerParaCombo += Time.deltaTime;
 		if (huboAsesinato)
 		{
+            // TODO: arreglar el sistema de combos
 			if (timerParaCombo <= tiempoParaCombo)
 			{
 				/* otorgo combo */
